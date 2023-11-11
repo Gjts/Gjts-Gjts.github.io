@@ -4,6 +4,445 @@
   
   
   <entry>
+    <title>第一章</title>
+    <link href="/2023/11/11/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+    <url>/2023/11/11/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>数学</category>
+      
+      <category>线代</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Math</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>第二章 求导数</title>
+    <link href="/2023/11/11/%E6%95%B0%E4%BA%8C%E7%AC%AC%E4%BA%8C%E7%AB%A0/"/>
+    <url>/2023/11/11/%E6%95%B0%E4%BA%8C%E7%AC%AC%E4%BA%8C%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>数学</category>
+      
+      <category>高数二</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Math</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Consul注册发现</title>
+    <link href="/2023/11/11/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0/"/>
+    <url>/2023/11/11/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%8F%91%E7%8E%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>微服务</category>
+      
+      <category>注册发现</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>注册发现</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>2023个人年度计划</title>
+    <link href="/2023/11/11/2023%E4%B8%AA%E4%BA%BA%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
+    <url>/2023/11/11/2023%E4%B8%AA%E4%BA%BA%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Ocelot网关</title>
+    <link href="/2023/11/11/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3/"/>
+    <url>/2023/11/11/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>微服务</category>
+      
+      <category>网关</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网关</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>影响力</title>
+    <link href="/2023/11/11/%E8%AF%BB%E4%B9%A6%E8%AE%B0%E5%BD%95/"/>
+    <url>/2023/11/11/%E8%AF%BB%E4%B9%A6%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>读书</category>
+      
+      <category>心理学</category>
+      
+      <category>读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>心理学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>后端面试</title>
+    <link href="/2023/11/11/%E5%90%8E%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    <url>/2023/11/11/%E5%90%8E%E7%AB%AF%E9%9D%A2%E8%AF%95/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>面试</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>后端面试</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>行为型设计模式</title>
+    <link href="/2023/11/11/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <url>/2023/11/11/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>设计模式</category>
+      
+      <category>行为型</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Behavioral</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>结构型设计模式</title>
+    <link href="/2023/11/11/%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <url>/2023/11/11/%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>设计模式</category>
+      
+      <category>结构型</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Structural</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>创建型设计模式</title>
+    <link href="/2023/11/11/%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <url>/2023/11/11/%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>设计模式</category>
+      
+      <category>创建型</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Creative</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>工具</title>
+    <link href="/2023/11/11/%E5%B7%A5%E5%85%B7/"/>
+    <url>/2023/11/11/%E5%B7%A5%E5%85%B7/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Tools</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>计算机网络</title>
+    <link href="/2023/11/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    <url>/2023/11/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机网络</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Computer Network</tag>
+      
+      <tag>计算机网络</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>口语第一天</title>
+    <link href="/2023/11/11/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD/"/>
+    <url>/2023/11/11/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>英语</category>
+      
+      <category>口语</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>English</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>算法</title>
+    <link href="/2023/11/11/%E7%AE%97%E6%B3%95/"/>
+    <url>/2023/11/11/%E7%AE%97%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>algorithm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数据结构</title>
+    <link href="/2023/11/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <url>/2023/11/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>数据结构</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Data Structure</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>第一章 求极限</title>
+    <link href="/2023/11/11/%E6%95%B0%E4%BA%8C%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+    <url>/2023/11/11/%E6%95%B0%E4%BA%8C%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>数学</category>
+      
+      <category>高数二</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Math</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>单词第一天</title>
+    <link href="/2023/11/11/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/"/>
+    <url>/2023/11/11/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>英语</category>
+      
+      <category>单词</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>English</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2023/11/09/hello-world/"/>
     <url>/2023/11/09/hello-world/</url>
