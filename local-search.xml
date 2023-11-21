@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>35. 搜索插入位置</title>
+    <link href="/2023/11/21/leetcode35/"/>
+    <url>/2023/11/21/leetcode35/</url>
+    
+    <content type="html"><![CDATA[<h2 id="标题：35-搜索插入位置"><a href="#标题：35-搜索插入位置" class="headerlink" title="标题：35. 搜索插入位置"></a>标题：35. 搜索插入位置</h2><blockquote><p>我最近在研究二分算法，并进行了相关实现。</p></blockquote><p><strong>搜索插入位置算法解析及实现步骤</strong></p><p>搜索插入位置算法用于在已排序的数组中查找目标值，并返回其插入的位置。</p><h3 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h3><p>给定一个 n 个元素有序（升序）的整型数组 nums 和一个目标值 target，写一个函数搜索 nums 中的 target，并返回其插入的位置。如果目标值存在，则返回目标值的索引；如果目标值不存在，则返回它将会被插入的位置索引。</p><h3 id="解题步骤："><a href="#解题步骤：" class="headerlink" title="解题步骤："></a>解题步骤：</h3><ol><li>初始化左指针 left 为数组起始位置，右指针 right 为数组末尾位置。</li><li>循环执行以下步骤，直到左指针不再小于等于右指针：<ul><li>计算中间指针 mid，通过 left + (right - left) &#x2F; 2 求得。</li><li>如果中间元素大于目标值，将右指针 right 更新为 mid - 1。</li><li>如果中间元素小于目标值，将左指针 left 更新为 mid + 1。</li><li>如果中间元素等于目标值，返回 mid 作为目标值的插入位置。</li></ul></li><li>若循环结束仍未找到目标值，返回左指针 left 作为目标值的插入位置。</li></ol><h3 id="解题实现："><a href="#解题实现：" class="headerlink" title="解题实现："></a>解题实现：</h3><p>C#</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> <span class="hljs-title">searchInsert</span>(<span class="hljs-params"><span class="hljs-built_in">int</span>[] nums, <span class="hljs-built_in">int</span> target</span>)</span><br>&#123;<br>    <span class="hljs-built_in">int</span> left = <span class="hljs-number">0</span>;<br>    <span class="hljs-built_in">int</span> right = nums.Length - <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">while</span> (left &lt;= right)<br>    &#123;<br>        <span class="hljs-built_in">int</span> mid = left + (right - left &gt;&gt; <span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">if</span> (nums[mid] &gt; target)<br>        &#123;<br>            right = mid - <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; target)<br>        &#123;<br>            left = mid + <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span><br>        &#123;<br>            <span class="hljs-keyword">return</span> mid;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> left;<br>&#125;<br></code></pre></td></tr></table></figure><p>C</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">searchInsert</span><span class="hljs-params">(<span class="hljs-type">int</span>* nums, <span class="hljs-type">int</span> numsSize, <span class="hljs-type">int</span> target)</span> &#123;<br>    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> right = numsSize - <span class="hljs-number">1</span>;<br>    <br>    <span class="hljs-keyword">while</span> (left &lt;= right) &#123;<br>        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;<br>        <span class="hljs-keyword">if</span> (nums[mid] &gt; target) &#123;<br>            right = mid - <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; target) &#123;<br>            left = mid + <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span> &#123;<br>            <span class="hljs-keyword">return</span> mid;<br>        &#125;<br>    &#125;<br>    <br>    <span class="hljs-keyword">return</span> left;<br>&#125;<br></code></pre></td></tr></table></figure><h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul><li>时间复杂度：O(log n)，其中 n 是数组的长度。</li><li>空间复杂度：O(1)。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>algorithm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>第一章</title>
     <link href="/2023/11/11/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
     <url>/2023/11/11/%E7%BA%BF%E4%BB%A3%E7%AC%AC%E4%B8%80%E7%AB%A0/</url>
