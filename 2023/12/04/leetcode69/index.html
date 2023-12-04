@@ -24,7 +24,7 @@
 <meta property="og:description" content="标题：69. x的平方数题目描述给定一个非负整数 x，计算并返回 x 的平方根。 解题思路可以使用二分查找的方法来逼近平方根的值。  定义变量 left 和 right，分别表示搜索范围的左边界和右边界。初始时，left 为 0，right 为 x。 进行二分查找，直到找到平方根的值。循环条件为 left &lt;&#x3D; right： 计算中间位置 mid，通过 left + (right">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-04T15:13:00.000Z">
-<meta property="article:modified_time" content="2023-12-04T15:17:01.049Z">
+<meta property="article:modified_time" content="2023-12-04T15:20:26.246Z">
 <meta property="article:author" content="Hardie Bao">
 <meta property="article:tag" content="algorithm">
 <meta name="twitter:card" content="summary_large_image">
@@ -336,7 +336,10 @@
 <p>C</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">double</span> <span class="hljs-title function_">mySqrt</span><span class="hljs-params">(<span class="hljs-type">double</span> x)</span> &#123;<br>    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> right = x;<br><br>    <span class="hljs-keyword">while</span> (left &lt;= right)<br>    &#123;<br>        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;<br>        <span class="hljs-type">long</span> square = (<span class="hljs-type">long</span>)mid * mid;<br><br>        <span class="hljs-keyword">if</span> (square == x)<br>        &#123;<br>            <span class="hljs-keyword">return</span> mid;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (square &lt; x)<br>        &#123;<br>            left = mid + <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span><br>        &#123;<br>            right = mid - <span class="hljs-number">1</span>;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> right;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>时间复杂度：O(log n)，其中 n 是数组的长度。每次二分查找可以将查找范围缩小一半，因此时间复杂度为对数级别。<br>空间复杂度：O(1)。除了返回的结果数组外，算法的额外空间复杂度是常数级别的。</p>
+<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul>
+<li>时间复杂度：O(log n)，其中 n 是数组的长度。每次二分查找可以将查找范围缩小一半，因此时间复杂度为对数级别。</li>
+<li>空间复杂度：O(1)。除了返回的结果数组外，算法的额外空间复杂度是常数级别的。</li>
+</ul>
 
                 
               </div>
