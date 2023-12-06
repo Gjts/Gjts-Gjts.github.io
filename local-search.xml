@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>26. 删除有序数组中的重复项</title>
+    <link href="/2023/12/06/leetcode26/"/>
+    <url>/2023/12/06/leetcode26/</url>
+    
+    <content type="html"><![CDATA[<h2 id="26-删除有序数组中的重复项"><a href="#26-删除有序数组中的重复项" class="headerlink" title="26. 删除有序数组中的重复项"></a>26. 删除有序数组中的重复项</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给你一个有序数组 <code>nums</code>，请你原地删除重复出现的元素，使每个元素只出现一次，返回删除后数组的新长度。不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。</p><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>由于数组已经是有序的，所以重复的元素必然相邻。</p><ol><li>定义一个指针 <code>left</code>，初始时指向数组的第一个元素。</li><li>遍历数组，如果当前元素 <code>nums[i]</code> 不等于上一个元素 <code>nums[i-1]</code>，则将其复制到 <code>nums[left]</code> 的位置，并将 <code>left</code> 指针向后移动一位。</li><li>遍历结束后，<code>left</code> 指针的位置即为新数组的长度。</li><li>返回 <code>left</code> 作为结果。</li></ol><h3 id="解题实现"><a href="#解题实现" class="headerlink" title="解题实现"></a>解题实现</h3><p>C#</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs javascript">public int <span class="hljs-title class_">RemoveDuplicates</span>(int[] nums)<br>&#123;<br>    <span class="hljs-keyword">if</span> (nums.<span class="hljs-property">Length</span> == <span class="hljs-number">0</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br><br>    int left = <span class="hljs-number">1</span>;<br><br>    <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">1</span>; i &lt; nums.<span class="hljs-property">Length</span>; i++)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (nums[i] != nums[i - <span class="hljs-number">1</span>])<br>        &#123;<br>            nums[left] = nums[i];<br>            left++;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> left;<br>&#125;<br><br><br>public int <span class="hljs-title class_">RemoveDuplicates</span>(int[] nums)<br>&#123;<br>    int left = <span class="hljs-number">0</span>;<br>    int right = <span class="hljs-number">1</span>;<br><br>    <span class="hljs-keyword">while</span> (right &lt; numsSize)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (nums[left] != nums[right])<br>        &#123;<br>            nums[left + <span class="hljs-number">1</span>] = nums[right];<br>            left++;<br>        &#125;<br><br>        right++;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> left + <span class="hljs-number">1</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>C</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">removeDuplicates</span><span class="hljs-params">(<span class="hljs-type">int</span>* nums, <span class="hljs-type">int</span> numsSize)</span> &#123;<br>    <span class="hljs-keyword">if</span> (numsSize == <span class="hljs-number">0</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br><br>    <span class="hljs-type">int</span> left = <span class="hljs-number">1</span>;<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; numsSize; i++)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (nums[i] != nums[i - <span class="hljs-number">1</span>])<br>        &#123;<br>            nums[left] = nums[i];<br>            left++;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> left;<br>&#125;<br></code></pre></td></tr></table></figure><h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><ul><li>时间复杂度：O(n)，其中 n 为数组的长度。需要遍历一次数组。</li><li>空间复杂度：O(1)。只使用了常数个额外空间。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>algorithm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>27. 移除元素</title>
     <link href="/2023/12/05/leetcode27/"/>
     <url>/2023/12/05/leetcode27/</url>
