@@ -16,23 +16,24 @@
   <meta name="author" content="Hardie Bao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="141. 环形链表 I题目描述给定一个链表，判断链表中是否有环。 进阶： 你能否不使用额外空间解决此题？ 解题思路使用快慢指针，判断链表是否有环。  使用两个指针 slow 和 fast，slow 每次走一步，fast 每次走两步。 如果链表有环，fast 最终会追上 slow，如果链表无环，fast 会先到达链表末尾。 如果存在环，两个指针最终会相遇；如果不存在环，快指针会先到达链表末尾。  C">
+    <meta name="description" content="242. 有效的字母异位词题目描述给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12arduinoCopy code输入: s &#x3D; &quot;anagram&quot;, t &#x3D; &quot;nagaram&quot;输出: true  示例 2: 12arduinoCopy code输入: s &#x3D; &quot;rat&quot;, t &#x3D; &amp;qu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="141. 环形链表 I">
-<meta property="og:url" content="https://gjts.github.io/2023/12/11/leetcode141/index.html">
+<meta property="og:title" content="242. 有效的字母异位词">
+<meta property="og:url" content="https://gjts.github.io/2023/12/13/leetcode242/index.html">
 <meta property="og:site_name" content="Gjtsのblog">
-<meta property="og:description" content="141. 环形链表 I题目描述给定一个链表，判断链表中是否有环。 进阶： 你能否不使用额外空间解决此题？ 解题思路使用快慢指针，判断链表是否有环。  使用两个指针 slow 和 fast，slow 每次走一步，fast 每次走两步。 如果链表有环，fast 最终会追上 slow，如果链表无环，fast 会先到达链表末尾。 如果存在环，两个指针最终会相遇；如果不存在环，快指针会先到达链表末尾。  C">
+<meta property="og:description" content="242. 有效的字母异位词题目描述给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12arduinoCopy code输入: s &#x3D; &quot;anagram&quot;, t &#x3D; &quot;nagaram&quot;输出: true  示例 2: 12arduinoCopy code输入: s &#x3D; &quot;rat&quot;, t &#x3D; &amp;qu">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-11T14:27:54.000Z">
-<meta property="article:modified_time" content="2023-12-11T14:28:21.089Z">
+<meta property="article:published_time" content="2023-12-12T16:19:27.000Z">
+<meta property="article:modified_time" content="2023-12-12T16:25:15.058Z">
 <meta property="article:author" content="Hardie Bao">
 <meta property="article:tag" content="algorithm">
-<meta property="article:tag" content="链表">
+<meta property="article:tag" content="数组">
+<meta property="article:tag" content="哈希表">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>141. 环形链表 I - Gjtsのblog</title>
+  <title>242. 有效的字母异位词 - Gjtsのblog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -227,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="141. 环形链表 I"></span>
+            <span id="subtitle" data-typed-text="242. 有效的字母异位词"></span>
           
         </div>
 
@@ -243,8 +244,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-11 22:27" pubdate>
-          2023年12月11日 晚上
+        <time datetime="2023-12-13 00:19" pubdate>
+          2023年12月13日 凌晨
         </time>
       </span>
     
@@ -255,7 +256,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          804 字
+          1.2k 字
         
       </span>
     
@@ -266,7 +267,7 @@
         
         
         
-          7 分钟
+          11 分钟
         
       </span>
     
@@ -311,26 +312,33 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">141. 环形链表 I</h1>
+            <h1 id="seo-header">242. 有效的字母异位词</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="141-环形链表-I"><a href="#141-环形链表-I" class="headerlink" title="141. 环形链表 I"></a>141. 环形链表 I</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一个链表，判断链表中是否有环。</p>
-<p><strong>进阶：</strong> 你能否不使用额外空间解决此题？</p>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>使用快慢指针，判断链表是否有环。</p>
-<ol>
-<li>使用两个指针 <code>slow</code> 和 <code>fast</code>，<code>slow</code> 每次走一步，<code>fast</code> 每次走两步。</li>
-<li>如果链表有环，<code>fast</code> 最终会追上 <code>slow</code>，如果链表无环，<code>fast</code> 会先到达链表末尾。</li>
-<li>如果存在环，两个指针最终会相遇；如果不存在环，快指针会先到达链表末尾。</li>
-</ol>
-<h3 id="C-代码实现"><a href="#C-代码实现" class="headerlink" title="C#代码实现"></a>C#代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> bool <span class="hljs-title function_">HasCycle</span><span class="hljs-params">(ListNode head)</span> &#123;<br>    <span class="hljs-type">ListNode</span> <span class="hljs-variable">slow</span> <span class="hljs-operator">=</span> head;<br>    <span class="hljs-type">ListNode</span> <span class="hljs-variable">fast</span> <span class="hljs-operator">=</span> head;<br><br>    <span class="hljs-keyword">while</span> (fast != <span class="hljs-literal">null</span> &amp;&amp; fast.next != <span class="hljs-literal">null</span>) &#123;<br>        slow = slow.next;<br>        fast = fast.next.next;<br><br>        <span class="hljs-keyword">if</span> (slow == fast) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; <span class="hljs-comment">// 链表有环</span><br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <span class="hljs-comment">// 链表无环</span><br>&#125;<br></code></pre></td></tr></table></figure>
+                <h2 id="242-有效的字母异位词"><a href="#242-有效的字母异位词" class="headerlink" title="242. 有效的字母异位词"></a>242. 有效的字母异位词</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs excel">arduinoCopy <span class="hljs-built_in">code</span>输入<span class="hljs-symbol">:</span> s = <span class="hljs-string">&quot;anagram&quot;</span>, <span class="hljs-built_in">t</span> = <span class="hljs-string">&quot;nagaram&quot;</span><br>输出<span class="hljs-symbol">:</span> <span class="hljs-built_in">true</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="C代码实现"><a href="#C代码实现" class="headerlink" title="C代码实现"></a>C代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">bool</span> <span class="hljs-title function_">hasCycle</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> ListNode *head)</span> &#123;<br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ListNode</span> *<span class="hljs-title">slow</span> =</span> head;<br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ListNode</span> *<span class="hljs-title">fast</span> =</span> head;<br><br>    <span class="hljs-keyword">while</span> (fast != <span class="hljs-literal">NULL</span> &amp;&amp; fast-&gt;next != <span class="hljs-literal">NULL</span>) &#123;<br>        slow = slow-&gt;next;<br>        fast = fast-&gt;next-&gt;next;<br><br>        <span class="hljs-keyword">if</span> (slow == fast) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; <span class="hljs-comment">// 链表有环</span><br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <span class="hljs-comment">// 链表无环</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs excel">arduinoCopy <span class="hljs-built_in">code</span>输入<span class="hljs-symbol">:</span> s = <span class="hljs-string">&quot;rat&quot;</span>, <span class="hljs-built_in">t</span> = <span class="hljs-string">&quot;car&quot;</span><br>输出<span class="hljs-symbol">:</span> <span class="hljs-built_in">false</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>说明:</strong> 你可以假设字符串只包含小写字母。</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>使用数组or哈希表来统计每个字符的出现次数。</p>
+<ol>
+<li>创建一个大小为 26 的数组，用于统计每个字母的出现次数。</li>
+<li>遍历字符串 s，对于每个字符，将对应的数组元素加一。</li>
+<li>遍历字符串 t，对于每个字符，将对应的数组元素减一。</li>
+<li>如果两个字符串是字母异位词，则最终数组中所有元素的值都应为 0。</li>
+</ol>
+<h3 id="C-代码实现"><a href="#C-代码实现" class="headerlink" title="C#代码实现"></a>C#代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> bool <span class="hljs-title function_">IsAnagram</span><span class="hljs-params">(string s, string t)</span> &#123;<br>    <span class="hljs-keyword">if</span> (s.Length != t.Length) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br><br>    <span class="hljs-type">int</span>[] count = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">26</span>];<br><br>    <span class="hljs-comment">// 统计字符串 s 中每个字符的出现次数</span><br>    foreach (<span class="hljs-type">char</span> ch in s) &#123;<br>        count[ch - <span class="hljs-string">&#x27;a&#x27;</span>]++;<br>    &#125;<br><br>    <span class="hljs-comment">// 统计字符串 t 中每个字符的出现次数</span><br>    foreach (<span class="hljs-type">char</span> ch in t) &#123;<br>        count[ch - <span class="hljs-string">&#x27;a&#x27;</span>]--;<br>    &#125;<br><br>    <span class="hljs-comment">// 判断数组中所有元素是否为 0</span><br>    foreach (<span class="hljs-type">int</span> c in count) &#123;<br>        <span class="hljs-keyword">if</span> (c != <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="C代码实现"><a href="#C代码实现" class="headerlink" title="C代码实现"></a>C代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">bool</span> <span class="hljs-title function_">isAnagram</span><span class="hljs-params">(<span class="hljs-type">char</span> * s, <span class="hljs-type">char</span> * t)</span>&#123;<br>    <span class="hljs-type">int</span> count[<span class="hljs-number">26</span>] = &#123;<span class="hljs-number">0</span>&#125;;<br><br>    <span class="hljs-comment">// 统计字符串 s 中每个字符的出现次数</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; s[i] != <span class="hljs-string">&#x27;\0&#x27;</span>; i++) &#123;<br>        count[s[i] - <span class="hljs-string">&#x27;a&#x27;</span>]++;<br>    &#125;<br><br>    <span class="hljs-comment">// 统计字符串 t 中每个字符的出现次数</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; t[i] != <span class="hljs-string">&#x27;\0&#x27;</span>; i++) &#123;<br>        count[t[i] - <span class="hljs-string">&#x27;a&#x27;</span>]--;<br>    &#125;<br><br>    <span class="hljs-comment">// 判断数组中所有元素是否为 0</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">26</span>; i++) &#123;<br>        <span class="hljs-keyword">if</span> (count[i] != <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h3 id="时间复杂度和空间复杂度"><a href="#时间复杂度和空间复杂度" class="headerlink" title="时间复杂度和空间复杂度"></a>时间复杂度和空间复杂度</h3><ul>
-<li>时间复杂度：O(n)，其中 n 是链表的长度。第一次遍历检测是否有环。</li>
-<li>空间复杂度：O(1)。除了常数级别的变量，算法的空间复杂度是常数级别的。</li>
+<li>时间复杂度：O(n)，其中 n 是字符串的长度。需要遍历字符串两次。</li>
+<li>空间复杂度：O(1)。因为只使用了大小为 26 的数组。</li>
 </ul>
 
                 
@@ -367,7 +375,9 @@
       
         <a href="/tags/algorithm/" class="print-no-link">#algorithm</a>
       
-        <a href="/tags/%E9%93%BE%E8%A1%A8/" class="print-no-link">#链表</a>
+        <a href="/tags/%E6%95%B0%E7%BB%84/" class="print-no-link">#数组</a>
+      
+        <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" class="print-no-link">#哈希表</a>
       
     </div>
   
@@ -379,8 +389,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>141. 环形链表 I</div>
-      <div>https://gjts.github.io/2023/12/11/leetcode141/</div>
+      <div>242. 有效的字母异位词</div>
+      <div>https://gjts.github.io/2023/12/13/leetcode242/</div>
     </div>
     <div class="license-meta">
       
@@ -392,7 +402,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月11日</div>
+          <div>2023年12月13日</div>
         </div>
       
       
@@ -424,9 +434,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/13/leetcode242/" title="242. 有效的字母异位词">
+                      <a href="/2023/12/13/leetcode383/" title="383. 赎金信">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">242. 有效的字母异位词</span>
+                        <span class="hidden-mobile">383. 赎金信</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -434,8 +444,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/11/leetcode142/" title="leetcode142">
-                        <span class="hidden-mobile">leetcode142</span>
+                      <a href="/2023/12/11/leetcode141/" title="141. 环形链表 I">
+                        <span class="hidden-mobile">141. 环形链表 I</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
