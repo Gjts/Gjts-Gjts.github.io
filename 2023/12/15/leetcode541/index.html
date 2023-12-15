@@ -16,15 +16,15 @@
   <meta name="author" content="Hardie Bao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="344.反转字符串题目描述编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。 不要使用额外的数组空间，必须在原地修改输入数组、使用 O(1) 额外空间解决这一问题。 你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。 示例 1: 12输入：[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&amp;">
+    <meta name="description" content="题目编号：541题目描述给定一个字符串 s 和一个整数 k，你需要对从字符串开头算起的每隔 2k 个字符的前 k 个字符进行反转。  如果剩余字符少于 k 个，则将剩余字符全部反转。 如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，剩余字符保持原样。  示例: 123输入: s &#x3D; &quot;abcdefg&quot;, k &#x3D; 2输出: &quot;bacdfeg&amp;quot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="344.反转字符串">
-<meta property="og:url" content="https://gjts.github.io/2023/12/14/leetcode344/index.html">
+<meta property="og:title" content="题目编号：541">
+<meta property="og:url" content="https://gjts.github.io/2023/12/15/leetcode541/index.html">
 <meta property="og:site_name" content="Gjtsのblog">
-<meta property="og:description" content="344.反转字符串题目描述编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。 不要使用额外的数组空间，必须在原地修改输入数组、使用 O(1) 额外空间解决这一问题。 你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。 示例 1: 12输入：[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&amp;">
+<meta property="og:description" content="题目编号：541题目描述给定一个字符串 s 和一个整数 k，你需要对从字符串开头算起的每隔 2k 个字符的前 k 个字符进行反转。  如果剩余字符少于 k 个，则将剩余字符全部反转。 如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，剩余字符保持原样。  示例: 123输入: s &#x3D; &quot;abcdefg&quot;, k &#x3D; 2输出: &quot;bacdfeg&amp;quot">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-14T13:57:35.000Z">
-<meta property="article:modified_time" content="2023-12-14T14:17:50.171Z">
+<meta property="article:published_time" content="2023-12-15T13:59:01.000Z">
+<meta property="article:modified_time" content="2023-12-15T14:00:39.555Z">
 <meta property="article:author" content="Hardie Bao">
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="字符串">
@@ -32,7 +32,7 @@
   
   
   
-  <title>344.反转字符串 - Gjtsのblog</title>
+  <title>题目编号：541 - Gjtsのblog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -227,7 +227,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="344.反转字符串"></span>
+            <span id="subtitle" data-typed-text="题目编号：541"></span>
           
         </div>
 
@@ -243,8 +243,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-14 21:57" pubdate>
-          2023年12月14日 晚上
+        <time datetime="2023-12-15 21:59" pubdate>
+          2023年12月15日 晚上
         </time>
       </span>
     
@@ -255,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.6k 字
         
       </span>
     
@@ -266,7 +266,7 @@
         
         
         
-          11 分钟
+          14 分钟
         
       </span>
     
@@ -311,34 +311,39 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">344.反转字符串</h1>
+            <h1 id="seo-header">题目编号：541</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="344-反转字符串"><a href="#344-反转字符串" class="headerlink" title="344.反转字符串"></a>344.反转字符串</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 <code>char[]</code> 的形式给出。</p>
-<p>不要使用额外的数组空间，必须在原地修改输入数组、使用 O(1) 额外空间解决这一问题。</p>
-<p>你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入：[<span class="hljs-string">&quot;h&quot;</span>,<span class="hljs-string">&quot;e&quot;</span>,<span class="hljs-string">&quot;l&quot;</span>,<span class="hljs-string">&quot;l&quot;</span>,<span class="hljs-string">&quot;o&quot;</span>]<br>输出：[<span class="hljs-string">&quot;o&quot;</span>,<span class="hljs-string">&quot;l&quot;</span>,<span class="hljs-string">&quot;l&quot;</span>,<span class="hljs-string">&quot;e&quot;</span>,<span class="hljs-string">&quot;h&quot;</span>]<br></code></pre></td></tr></table></figure>
+                <h2 id="题目编号：541"><a href="#题目编号：541" class="headerlink" title="题目编号：541"></a>题目编号：541</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一个字符串 s 和一个整数 k，你需要对从字符串开头算起的每隔 2k 个字符的前 k 个字符进行反转。</p>
+<ul>
+<li>如果剩余字符少于 k 个，则将剩余字符全部反转。</li>
+<li>如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，剩余字符保持原样。</li>
+</ul>
+<p><strong>示例:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入: s = <span class="hljs-string">&quot;abcdefg&quot;</span>, k = <span class="hljs-number">2</span><br>输出: <span class="hljs-string">&quot;bacdfeg&quot;</span><br>解释: 从字符串开头算起，第一组 2k 字符是 <span class="hljs-string">&quot;ab&quot;</span>，第二组 2k 字符是 <span class="hljs-string">&quot;cd&quot;</span>，所以最终答案是 <span class="hljs-string">&quot;bacdfeg&quot;</span>。<br></code></pre></td></tr></table></figure>
 
-<p><strong>示例 2:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入：[<span class="hljs-string">&quot;H&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;n&quot;</span>,<span class="hljs-string">&quot;n&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;h&quot;</span>]<br>输出：[<span class="hljs-string">&quot;h&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;n&quot;</span>,<span class="hljs-string">&quot;n&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;H&quot;</span>]<br></code></pre></td></tr></table></figure>
-
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><h4 id="类比和解题步骤"><a href="#类比和解题步骤" class="headerlink" title="类比和解题步骤"></a>类比和解题步骤</h4><p>考虑类比：假设你有一串珠子，你希望将其颠倒过来。你可以使用两个指针，一个指向字符串的开头，另一个指向字符串的末尾，然后交换它们指向的字符。</p>
+<p><strong>提示:</strong></p>
+<ul>
+<li>该字符串只包含小写英文字母。</li>
+<li>给定字符串的长度和 k 在 [1, 10000] 范围内。</li>
+</ul>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><h4 id="类比和解题步骤"><a href="#类比和解题步骤" class="headerlink" title="类比和解题步骤"></a>类比和解题步骤</h4><p>考虑类比：假设你有一条领带，你希望每隔一段距离将其中的一部分领带反转。你可以通过遍历字符串，按照规定的间隔（2k）对每一部分进行反转。</p>
 <ol>
-<li><strong>初始化两个指针：</strong> 分别指向字符串的开头和末尾。</li>
-<li><strong>交换字符：</strong> 使用一个循环，不断交换两个指针所指向的字符，然后将指针向中间移动，直到它们相遇。</li>
+<li><strong>遍历字符串：</strong> 从字符串的开头开始，按照 2k 的间隔遍历字符串。</li>
+<li><strong>反转部分字符：</strong> 对每一部分的前 k 个字符进行反转。</li>
+<li><strong>处理剩余字符：</strong> 如果剩余字符少于 k 个，则将其全部反转。</li>
 </ol>
 <h4 id="特殊案例"><a href="#特殊案例" class="headerlink" title="特殊案例"></a>特殊案例</h4><ul>
-<li>如果输入数组为空，则直接返回空数组。</li>
+<li>如果输入字符串为空，则直接返回空字符串。</li>
 </ul>
-<h3 id="C-代码实现"><a href="#C-代码实现" class="headerlink" title="C#代码实现"></a>C#代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">ReverseString</span><span class="hljs-params">(<span class="hljs-type">char</span>[] s)</span> &#123;<br>    <span class="hljs-comment">// 如果传入的字符数组为空或者长度小于2，则直接返回</span><br>    <span class="hljs-keyword">if</span> (s == <span class="hljs-literal">null</span> || s.Length &lt; <span class="hljs-number">2</span>) &#123;<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<br><br>    <span class="hljs-comment">// 定义左右指针</span><br>    <span class="hljs-type">int</span> <span class="hljs-variable">left</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">right</span> <span class="hljs-operator">=</span> s.Length - <span class="hljs-number">1</span>;<br><br>    <span class="hljs-comment">// 左指针小于右指针时，交换左右指针指向的字符，并移动指针</span><br>    <span class="hljs-keyword">while</span> (left &lt; right) &#123;<br>        <span class="hljs-comment">// 交换左右指针指向的字符</span><br>        <span class="hljs-type">char</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> s[left];<br>        s[left] = s[right];<br>        s[right] = temp;<br><br>        <span class="hljs-comment">// 移动指针</span><br>        left++;<br>        right--;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="C-代码实现"><a href="#C-代码实现" class="headerlink" title="C#代码实现"></a>C#代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> string <span class="hljs-title function_">ReverseStr</span><span class="hljs-params">(string s, <span class="hljs-type">int</span> k)</span> &#123;<br>    <span class="hljs-comment">// 如果字符串为空或者 k 小于等于 0，则直接返回</span><br>    <span class="hljs-keyword">if</span> (string.IsNullOrEmpty(s) || k &lt;= <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-keyword">return</span> s;<br>    &#125;<br><br>    <span class="hljs-comment">// 将字符串转换为字符数组</span><br>    <span class="hljs-type">char</span>[] charArray = s.ToCharArray();<br>    <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> charArray.Length;<br><br>    <span class="hljs-comment">// 遍历字符数组，每隔 k 个字符反转一次</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; n; i += <span class="hljs-number">2</span> * k) &#123;<br>        <span class="hljs-comment">// 左指针</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">left</span> <span class="hljs-operator">=</span> i;<br>        <span class="hljs-comment">// 右指针，取最小值，防止数组越界</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">right</span> <span class="hljs-operator">=</span> Math.Min(i + k - <span class="hljs-number">1</span>, n - <span class="hljs-number">1</span>);<br><br>        <span class="hljs-comment">// 交换左右指针指向的字符，并移动指针</span><br>        <span class="hljs-keyword">while</span> (left &lt; right) &#123;<br>            <span class="hljs-comment">// 反转前 k 个字符</span><br>            <span class="hljs-type">char</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> charArray[left];<br>            charArray[left] = charArray[right];<br>            charArray[right] = temp;<br><br>            <span class="hljs-comment">// 移动指针</span><br>            left++;<br>            right--;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-comment">// 将字符数组转换为字符串</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">string</span>(charArray);<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h3 id="C代码实现"><a href="#C代码实现" class="headerlink" title="C代码实现"></a>C代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">reverseString</span><span class="hljs-params">(<span class="hljs-type">char</span>* s, <span class="hljs-type">int</span> sSize)</span> &#123;<br>    <span class="hljs-keyword">if</span> (s == <span class="hljs-literal">NULL</span> || sSize &lt; <span class="hljs-number">2</span>) &#123;<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<br><br>    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> right = sSize - <span class="hljs-number">1</span>;<br><br>    <span class="hljs-keyword">while</span> (left &lt; right) &#123;<br>        <span class="hljs-comment">// 交换左右指针指向的字符</span><br>        <span class="hljs-type">char</span> temp = s[left];<br>        s[left] = s[right];<br>        s[right] = temp;<br><br>        <span class="hljs-comment">// 移动指针</span><br>        left++;<br>        right--;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="C代码实现"><a href="#C代码实现" class="headerlink" title="C代码实现"></a>C代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">char</span>* <span class="hljs-title function_">reverseStr</span><span class="hljs-params">(<span class="hljs-type">char</span>* s, <span class="hljs-type">int</span> k)</span> &#123;<br>    <span class="hljs-comment">// 如果传入的字符串为空或者 k 小于等于 0，则直接返回</span><br>    <span class="hljs-keyword">if</span> (s == <span class="hljs-literal">NULL</span> || k &lt;= <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-keyword">return</span> s;<br>    &#125;<br><br>    <span class="hljs-comment">// 获取字符串长度</span><br>    <span class="hljs-type">int</span> n = <span class="hljs-built_in">strlen</span>(s);<br><br>    <span class="hljs-comment">// 遍历字符串，每隔 k 个字符反转一次</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i += <span class="hljs-number">2</span> * k) &#123;<br>        <span class="hljs-comment">// 记录左指针</span><br>        <span class="hljs-type">int</span> left = i;<br>        <span class="hljs-comment">// 记录右指针，如果右指针超过字符串长度，则取字符串最后一个字符</span><br>        <span class="hljs-type">int</span> right = fmin(i + k - <span class="hljs-number">1</span>, n - <span class="hljs-number">1</span>);<br><br>        <span class="hljs-comment">// 交换左右指针指向的字符，并移动指针</span><br>        <span class="hljs-keyword">while</span> (left &lt; right) &#123;<br>            <span class="hljs-comment">// 反转前 k 个字符</span><br>            <span class="hljs-comment">// 交换左右指针指向的字符</span><br>            <span class="hljs-type">char</span> temp = s[left];<br>            s[left] = s[right];<br>            s[right] = temp;<br><br>            <span class="hljs-comment">// 移动指针</span><br>            left++;<br>            right--;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> s;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h3 id="时间复杂度和空间复杂度"><a href="#时间复杂度和空间复杂度" class="headerlink" title="时间复杂度和空间复杂度"></a>时间复杂度和空间复杂度</h3><ul>
-<li>时间复杂度：O(n)，其中 n 是数组 <code>s</code> 的长度。因为我们只遍历了一半的数组。</li>
+<li>时间复杂度：O(n)，其中 n 是字符串 <code>s</code> 的长度。遍历字符串一次。</li>
 <li>空间复杂度：O(1)。只使用了常数级别的额外空间。</li>
 </ul>
 
@@ -388,8 +393,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>344.反转字符串</div>
-      <div>https://gjts.github.io/2023/12/14/leetcode344/</div>
+      <div>题目编号：541</div>
+      <div>https://gjts.github.io/2023/12/15/leetcode541/</div>
     </div>
     <div class="license-meta">
       
@@ -401,7 +406,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月14日</div>
+          <div>2023年12月15日</div>
         </div>
       
       
@@ -433,9 +438,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/15/leetcode541/" title="题目编号：541">
+                      <a href="/2023/12/15/leetcode151/" title="题目编号：151">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">题目编号：541</span>
+                        <span class="hidden-mobile">题目编号：151</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -443,8 +448,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/14/leetcode1/" title="1.两数之和">
-                        <span class="hidden-mobile">1.两数之和</span>
+                      <a href="/2023/12/14/leetcode344/" title="344.反转字符串">
+                        <span class="hidden-mobile">344.反转字符串</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
