@@ -16,23 +16,23 @@
   <meta name="author" content="Hardie Bao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="151.翻转字符串里的单词题目描述给定一个字符串，逐个翻转字符串中的每个单词。 示例 1: 12输入: &quot;the sky is blue&quot;输出: &quot;blue is sky the&quot;  示例 2: 123输入: &quot;  hello world!  &quot;输出: &quot;world! hello&quot;解释: 输入字符串可以在前面或者后面包">
+    <meta name="description" content="70.爬楼梯题目描述假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 注意： 给定 n 是一个正整数。 示例 1: 12345输入： 2输出： 2解释： 有两种方法可以爬到楼顶。1. 1 阶 + 1 阶2. 2 阶  示例 2: 123456输入： 3输出： 3解释： 有三种方法可以爬到楼顶。1. 1 阶 + 1 阶 + 1 阶">
 <meta property="og:type" content="article">
-<meta property="og:title" content="151.翻转字符串里的单词">
-<meta property="og:url" content="https://gjts.github.io/2023/12/15/leetcode151/index.html">
+<meta property="og:title" content="70.爬楼梯">
+<meta property="og:url" content="https://gjts.github.io/2023/12/16/leetcode70/index.html">
 <meta property="og:site_name" content="Gjtsのblog">
-<meta property="og:description" content="151.翻转字符串里的单词题目描述给定一个字符串，逐个翻转字符串中的每个单词。 示例 1: 12输入: &quot;the sky is blue&quot;输出: &quot;blue is sky the&quot;  示例 2: 123输入: &quot;  hello world!  &quot;输出: &quot;world! hello&quot;解释: 输入字符串可以在前面或者后面包">
+<meta property="og:description" content="70.爬楼梯题目描述假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 注意： 给定 n 是一个正整数。 示例 1: 12345输入： 2输出： 2解释： 有两种方法可以爬到楼顶。1. 1 阶 + 1 阶2. 2 阶  示例 2: 123456输入： 3输出： 3解释： 有三种方法可以爬到楼顶。1. 1 阶 + 1 阶 + 1 阶">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-15T14:04:14.000Z">
-<meta property="article:modified_time" content="2023-12-15T14:06:52.640Z">
+<meta property="article:published_time" content="2023-12-16T11:36:52.000Z">
+<meta property="article:modified_time" content="2023-12-16T11:38:40.692Z">
 <meta property="article:author" content="Hardie Bao">
 <meta property="article:tag" content="algorithm">
-<meta property="article:tag" content="字符串">
+<meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>151.翻转字符串里的单词 - Gjtsのblog</title>
+  <title>70.爬楼梯 - Gjtsのblog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -227,7 +227,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="151.翻转字符串里的单词"></span>
+            <span id="subtitle" data-typed-text="70.爬楼梯"></span>
           
         </div>
 
@@ -243,8 +243,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-15 22:04" pubdate>
-          2023年12月15日 晚上
+        <time datetime="2023-12-16 19:36" pubdate>
+          2023年12月16日 晚上
         </time>
       </span>
     
@@ -255,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.7k 字
+          1.1k 字
         
       </span>
     
@@ -266,7 +266,7 @@
         
         
         
-          23 分钟
+          10 分钟
         
       </span>
     
@@ -311,41 +311,36 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">151.翻转字符串里的单词</h1>
+            <h1 id="seo-header">70.爬楼梯</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="151-翻转字符串里的单词"><a href="#151-翻转字符串里的单词" class="headerlink" title="151.翻转字符串里的单词"></a>151.翻转字符串里的单词</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一个字符串，逐个翻转字符串中的每个单词。</p>
+                <h2 id="70-爬楼梯"><a href="#70-爬楼梯" class="headerlink" title="70.爬楼梯"></a>70.爬楼梯</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。</p>
+<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<p><strong>注意：</strong> 给定 n 是一个正整数。</p>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入: <span class="hljs-string">&quot;the sky is blue&quot;</span><br>输出: <span class="hljs-string">&quot;blue is sky the&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入： <span class="hljs-number">2</span><br>输出： <span class="hljs-number">2</span><br>解释： 有两种方法可以爬到楼顶。<br><span class="hljs-number">1.</span> <span class="hljs-number">1</span> 阶 + <span class="hljs-number">1</span> 阶<br><span class="hljs-number">2.</span> <span class="hljs-number">2</span> 阶<br></code></pre></td></tr></table></figure>
 
 <p><strong>示例 2:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入: <span class="hljs-string">&quot;  hello world!  &quot;</span><br>输出: <span class="hljs-string">&quot;world! hello&quot;</span><br>解释: 输入字符串可以在前面或者后面包含多余的空格，但是反转后的字符不能包括。<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入： <span class="hljs-number">3</span><br>输出： <span class="hljs-number">3</span><br>解释： 有三种方法可以爬到楼顶。<br><span class="hljs-number">1.</span> <span class="hljs-number">1</span> 阶 + <span class="hljs-number">1</span> 阶 + <span class="hljs-number">1</span> 阶<br><span class="hljs-number">2.</span> <span class="hljs-number">1</span> 阶 + <span class="hljs-number">2</span> 阶<br><span class="hljs-number">3.</span> <span class="hljs-number">2</span> 阶 + <span class="hljs-number">1</span> 阶<br></code></pre></td></tr></table></figure>
 
-<p><strong>示例 3:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入: <span class="hljs-string">&quot;a good   example&quot;</span><br>输出: <span class="hljs-string">&quot;example good a&quot;</span><br>解释: 输入字符串可以在前面或者后面包含多余的空格，但是反转后的字符不能包括。<br></code></pre></td></tr></table></figure>
-
-<p><strong>说明：</strong></p>
-<ul>
-<li>无空格字符构成一个单词。</li>
-<li>输入字符串可以在前面或者后面包含多余的空格，但是反转后的字符不能包括。</li>
-</ul>
-<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><h4 id="类比和解题步骤"><a href="#类比和解题步骤" class="headerlink" title="类比和解题步骤"></a>类比和解题步骤</h4><p>考虑类比：假设你有一篇文章，你希望将其中的每个单词逐个翻转。你可以通过先将整个文章逐字符翻转，然后再对每个单词逐字符翻转，最终得到逐个翻转单词的结果。</p>
-<ol>
-<li><strong>整体翻转字符串：</strong> 对整个字符串进行逐字符翻转。</li>
-<li><strong>逐个翻转单词：</strong> 对每个单词进行逐字符翻转，得到最终结果。</li>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><h4 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h4><ol>
+<li><strong>定义状态：</strong> 设 <code>dp[i]</code> 表示爬到第 <code>i</code> 阶楼梯的方法数。</li>
+<li><strong>状态转移方程：</strong> <code>dp[i] = dp[i-1] + dp[i-2]</code>，即爬到第 <code>i</code> 阶楼梯的方法数等于爬到第 <code>i-1</code> 阶楼梯的方法数加上爬到第 <code>i-2</code> 阶楼梯的方法数。</li>
+<li><strong>初始状态：</strong> <code>dp[1] = 1</code>，<code>dp[2] = 2</code>。</li>
+<li><strong>遍历顺序：</strong> 从小到大遍历，计算每一层楼梯的方法数。</li>
 </ol>
 <h4 id="特殊案例"><a href="#特殊案例" class="headerlink" title="特殊案例"></a>特殊案例</h4><ul>
-<li>如果输入字符串为空，则直接返回空字符串。</li>
+<li>如果输入 <code>n</code> 为 1 或 2，则直接返回 <code>n</code>。</li>
 </ul>
-<h3 id="C-代码实现"><a href="#C-代码实现" class="headerlink" title="C#代码实现"></a>C#代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> string <span class="hljs-title function_">ReverseWords</span><span class="hljs-params">(string s)</span> &#123;<br>    <span class="hljs-keyword">if</span> (string.IsNullOrEmpty(s)) &#123;<br>        <span class="hljs-keyword">return</span> s;<br>    &#125;<br><br>    <span class="hljs-type">char</span>[] charArray = s.ToCharArray();<br>    <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> charArray.Length;<br><br>    <span class="hljs-comment">// 整体翻转字符串</span><br>    Reverse(charArray, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>);<br><br>    <span class="hljs-comment">// 逐个翻转单词</span><br>    ReverseWords(charArray, n);<br><br>    <span class="hljs-comment">// 去除多余空格并转为字符串</span><br>    <span class="hljs-keyword">return</span> CleanSpaces(charArray, n);<br>&#125;<br><br><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">Reverse</span><span class="hljs-params">(<span class="hljs-type">char</span>[] charArray, <span class="hljs-type">int</span> start, <span class="hljs-type">int</span> end)</span> &#123;<br>    <span class="hljs-keyword">while</span> (start &lt; end) &#123;<br>        <span class="hljs-type">char</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> charArray[start];<br>        charArray[start] = charArray[end];<br>        charArray[end] = temp;<br>        start++;<br>        end--;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">ReverseWords</span><span class="hljs-params">(<span class="hljs-type">char</span>[] charArray, <span class="hljs-type">int</span> n)</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">start</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">end</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br><br>    <span class="hljs-keyword">while</span> (start &lt; n) &#123;<br>        <span class="hljs-keyword">while</span> (end &lt; n &amp;&amp; charArray[end] != <span class="hljs-string">&#x27; &#x27;</span>) &#123;<br>            end++;<br>        &#125;<br><br>        Reverse(charArray, start, end - <span class="hljs-number">1</span>);<br><br>        start = end + <span class="hljs-number">1</span>;<br>        end++;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">private</span> string <span class="hljs-title function_">CleanSpaces</span><span class="hljs-params">(<span class="hljs-type">char</span>[] charArray, <span class="hljs-type">int</span> n)</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br><br>    <span class="hljs-keyword">while</span> (j &lt; n) &#123;<br>        <span class="hljs-comment">// 跳过多余空格</span><br>        <span class="hljs-keyword">while</span> (j &lt; n &amp;&amp; charArray[j] == <span class="hljs-string">&#x27; &#x27;</span>) &#123;<br>            j++;<br>        &#125;<br><br>        <span class="hljs-comment">// 复制非空格字符</span><br>        <span class="hljs-keyword">while</span> (j &lt; n &amp;&amp; charArray[j] != <span class="hljs-string">&#x27; &#x27;</span>) &#123;<br>            charArray[i] = charArray[j];<br>            i++;<br>            j++;<br>        &#125;<br><br>        <span class="hljs-comment">// 跳过多余空格</span><br>        <span class="hljs-keyword">while</span> (j &lt; n &amp;&amp; charArray[j] == <span class="hljs-string">&#x27; &#x27;</span>) &#123;<br>            j++;<br>        &#125;<br><br>        <span class="hljs-comment">// 添加一个空格分隔单词</span><br>        <span class="hljs-keyword">if</span> (j &lt; n) &#123;<br>            charArray[i] = <span class="hljs-string">&#x27; &#x27;</span>;<br>            i++;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">string</span>(charArray, <span class="hljs-number">0</span>, i);<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="C-代码实现"><a href="#C-代码实现" class="headerlink" title="C#代码实现"></a>C#代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">ClimbStairs</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> &#123;<br>    <span class="hljs-comment">// 如果楼梯只有一阶或者两阶，直接返回阶数</span><br>    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span> || n == <span class="hljs-number">2</span>) &#123;<br>        <span class="hljs-keyword">return</span> n;<br>    &#125;<br><br>    <span class="hljs-comment">// 创建一个数组，长度为n+1</span><br>    <span class="hljs-type">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n + <span class="hljs-number">1</span>];<br>    <span class="hljs-comment">// 初始化数组，第一阶和第二阶的步数都为1</span><br>    dp[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;<br>    dp[<span class="hljs-number">2</span>] = <span class="hljs-number">2</span>;<br><br>    <span class="hljs-comment">// 从第三阶开始，动态规划计算步数</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">3</span>; i &lt;= n; i++) &#123;<br>        <span class="hljs-comment">// 动态规划转移方程，dp[i] = dp[i - 1] + dp[i - 2]</span><br>        dp[i] = dp[i - <span class="hljs-number">1</span>] + dp[i - <span class="hljs-number">2</span>];<br>    &#125;<br><br>    <span class="hljs-comment">// 返回最后一步的步数</span><br>    <span class="hljs-keyword">return</span> dp[n];<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h3 id="C代码实现"><a href="#C代码实现" class="headerlink" title="C代码实现"></a>C代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">reverse</span><span class="hljs-params">(<span class="hljs-type">char</span>* s, <span class="hljs-type">int</span> start, <span class="hljs-type">int</span> end)</span> &#123;<br>    <span class="hljs-keyword">while</span> (start &lt; end) &#123;<br>        <span class="hljs-type">char</span> temp = s[start];<br>        s[start] = s[end];<br>        s[end] = temp;<br>        start++;<br>        end--;<br>    &#125;<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">reverseWords</span><span class="hljs-params">(<span class="hljs-type">char</span>* s)</span> &#123;<br>    <span class="hljs-type">int</span> n = <span class="hljs-built_in">strlen</span>(s);<br><br>    <span class="hljs-comment">// 整体翻转字符串</span><br>    reverse(s, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>);<br><br>    <span class="hljs-type">int</span> start = <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> end = <span class="hljs-number">0</span>;<br><br>    <span class="hljs-keyword">while</span> (start &lt; n) &#123;<br>        <span class="hljs-comment">// 跳过多余空格</span><br>        <span class="hljs-keyword">while</span> (end &lt; n &amp;&amp; s[end] == <span class="hljs-string">&#x27; &#x27;</span>) &#123;<br>            end++;<br>        &#125;<br><br>        <span class="hljs-comment">// 逐个翻转单词</span><br>        reverse(s, start, end - <span class="hljs-number">1</span>);<br><br>        start = end + <span class="hljs-number">1</span>;<br>        end++;<br>    &#125;<br><br>    <span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;<br><br>    <span class="hljs-keyword">while</span> (j &lt; n) &#123;<br>        <span class="hljs-comment">// 跳过多余空格</span><br>        <span class="hljs-keyword">while</span> (j &lt; n &amp;&amp; s[j] == <span class="hljs-string">&#x27; &#x27;</span>) &#123;<br>            j++;<br>        &#125;<br><br>        <span class="hljs-comment">// 复制非空格字符</span><br>        <span class="hljs-keyword">while</span> (j &lt; n &amp;&amp; s[j] != <span class="hljs-string">&#x27; &#x27;</span>) &#123;<br>            s[i] = s[j];<br>            i++;<br>            j++;<br>        &#125;<br><br>        <span class="hljs-comment">// 跳过多余空格</span><br>        <span class="hljs-keyword">while</span> (j &lt; n &amp;&amp; s[j] == <span class="hljs-string">&#x27; &#x27;</span>) &#123;<br>            j++;<br>        &#125;<br><br>        <span class="hljs-comment">// 添加一个空格分隔单词</span><br>        <span class="hljs-keyword">if</span> (j &lt; n) &#123;<br>            s[i] = <span class="hljs-string">&#x27; &#x27;</span>;<br>            i++;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-comment">// 添加字符串结尾</span><br>    s[i] = <span class="hljs-string">&#x27;\0&#x27;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="C代码实现"><a href="#C代码实现" class="headerlink" title="C代码实现"></a>C代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">climbStairs</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> &#123;<br>    <span class="hljs-comment">// 如果楼梯只有一阶或者两阶，直接返回阶数</span><br>    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span> || n == <span class="hljs-number">2</span>) &#123;<br>        <span class="hljs-keyword">return</span> n;<br>    &#125;<br><br>    <span class="hljs-comment">// 定义一个数组，用来存储阶数对应的斐波那契数</span><br>    <span class="hljs-type">int</span>* dp = (<span class="hljs-type">int</span>*)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-type">int</span>) * (n + <span class="hljs-number">1</span>));<br>    <span class="hljs-comment">// 初始化数组，斐波那契数从1开始，所以dp[1]和dp[2]都等于1</span><br>    dp[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;<br>    dp[<span class="hljs-number">2</span>] = <span class="hljs-number">2</span>;<br><br>    <span class="hljs-comment">// 从第三阶开始，斐波那契数等于前两阶的和</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">3</span>; i &lt;= n; i++) &#123;<br>        dp[i] = dp[i - <span class="hljs-number">1</span>] + dp[i - <span class="hljs-number">2</span>];<br>    &#125;<br><br>    <span class="hljs-comment">// 返回斐波那契数</span><br>    <span class="hljs-type">int</span> result = dp[n];<br>    <span class="hljs-comment">// 释放内存</span><br>    <span class="hljs-built_in">free</span>(dp);<br><br>    <span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h3 id="时间复杂度和空间复杂度"><a href="#时间复杂度和空间复杂度" class="headerlink" title="时间复杂度和空间复杂度"></a>时间复杂度和空间复杂度</h3><ul>
-<li>时间复杂度：O(n)，其中 n 是字符串的长度。整体翻转字符串和逐个翻转单词的时间复杂度均为 O(n)。</li>
-<li>空间复杂度：O(1)。只使用了常数级别的额外空间。</li>
+<li>时间复杂度：O(n)，其中 n 是楼梯的阶数。需要计算每一层楼梯的方法数。</li>
+<li>空间复杂度：O(n)。使用了一个大小为 n+1 的数组来保存中间结果。</li>
 </ul>
 
                 
@@ -382,7 +377,7 @@
       
         <a href="/tags/algorithm/" class="print-no-link">#algorithm</a>
       
-        <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="print-no-link">#字符串</a>
+        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="print-no-link">#动态规划</a>
       
     </div>
   
@@ -394,8 +389,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>151.翻转字符串里的单词</div>
-      <div>https://gjts.github.io/2023/12/15/leetcode151/</div>
+      <div>70.爬楼梯</div>
+      <div>https://gjts.github.io/2023/12/16/leetcode70/</div>
     </div>
     <div class="license-meta">
       
@@ -407,7 +402,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月15日</div>
+          <div>2023年12月16日</div>
         </div>
       
       
@@ -439,9 +434,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/16/leetcode70/" title="70.爬楼梯">
+                      <a href="/2023/12/16/leetcode509/" title="509.斐波那契数">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">70.爬楼梯</span>
+                        <span class="hidden-mobile">509.斐波那契数</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -449,8 +444,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/15/leetcode541/" title="541.反转字符串II">
-                        <span class="hidden-mobile">541.反转字符串II</span>
+                      <a href="/2023/12/15/leetcode151/" title="151.翻转字符串里的单词">
+                        <span class="hidden-mobile">151.翻转字符串里的单词</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
