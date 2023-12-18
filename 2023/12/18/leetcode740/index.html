@@ -16,15 +16,15 @@
   <meta name="author" content="Hardie Bao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="746. 使用最小花费爬楼梯题目描述数组的每个下标作为一个阶梯，第 i 个阶梯对应着一个非负数的体力花费值 cost[i]（下标从 0 开始）。 每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者跳过这个阶梯。请你找出达到楼层顶部的最低花费。 在开始时，你可以选择从索引为 0 或 1 的元素作为初始阶梯。 示例 1: 123输入：cost &#x3D; [10, 15, 20]输">
+    <meta name="description" content="740. 删除并获得点数题目描述给你一个整数数组 nums ，你可以对它进行一些操作。 每次操作中，选择任意一个 nums[i] ，删除它并获得 nums[i] 的点数。之后，你必须删除每个等于 nums[i] - 1 或 nums[i] + 1 的元素。 开始你拥有 0 个点数。返回你能通过这些操作获得的最大点数。 示例 1: 12345输入: nums &#x3D; [3, 4, 2]输出: 6解释:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="746. 使用最小花费爬楼梯">
-<meta property="og:url" content="https://gjts.github.io/2023/12/17/leetcode746/index.html">
+<meta property="og:title" content="740. 删除并获得点数">
+<meta property="og:url" content="https://gjts.github.io/2023/12/18/leetcode740/index.html">
 <meta property="og:site_name" content="Gjtsのblog">
-<meta property="og:description" content="746. 使用最小花费爬楼梯题目描述数组的每个下标作为一个阶梯，第 i 个阶梯对应着一个非负数的体力花费值 cost[i]（下标从 0 开始）。 每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者跳过这个阶梯。请你找出达到楼层顶部的最低花费。 在开始时，你可以选择从索引为 0 或 1 的元素作为初始阶梯。 示例 1: 123输入：cost &#x3D; [10, 15, 20]输">
+<meta property="og:description" content="740. 删除并获得点数题目描述给你一个整数数组 nums ，你可以对它进行一些操作。 每次操作中，选择任意一个 nums[i] ，删除它并获得 nums[i] 的点数。之后，你必须删除每个等于 nums[i] - 1 或 nums[i] + 1 的元素。 开始你拥有 0 个点数。返回你能通过这些操作获得的最大点数。 示例 1: 12345输入: nums &#x3D; [3, 4, 2]输出: 6解释:">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-17T08:45:15.000Z">
-<meta property="article:modified_time" content="2023-12-17T08:48:25.649Z">
+<meta property="article:published_time" content="2023-12-18T14:56:05.000Z">
+<meta property="article:modified_time" content="2023-12-18T14:58:08.591Z">
 <meta property="article:author" content="Hardie Bao">
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="动态规划">
@@ -32,7 +32,7 @@
   
   
   
-  <title>746. 使用最小花费爬楼梯 - Gjtsのblog</title>
+  <title>740. 删除并获得点数 - Gjtsのblog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -227,7 +227,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="746. 使用最小花费爬楼梯"></span>
+            <span id="subtitle" data-typed-text="740. 删除并获得点数"></span>
           
         </div>
 
@@ -243,8 +243,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-17 16:45" pubdate>
-          2023年12月17日 下午
+        <time datetime="2023-12-18 22:56" pubdate>
+          2023年12月18日 晚上
         </time>
       </span>
     
@@ -255,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          2.1k 字
         
       </span>
     
@@ -266,7 +266,7 @@
         
         
         
-          14 分钟
+          18 分钟
         
       </span>
     
@@ -311,41 +311,38 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">746. 使用最小花费爬楼梯</h1>
+            <h1 id="seo-header">740. 删除并获得点数</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="746-使用最小花费爬楼梯"><a href="#746-使用最小花费爬楼梯" class="headerlink" title="746. 使用最小花费爬楼梯"></a>746. 使用最小花费爬楼梯</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>数组的每个下标作为一个阶梯，第 <code>i</code> 个阶梯对应着一个非负数的体力花费值 <code>cost[i]</code>（下标从 0 开始）。</p>
-<p>每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者跳过这个阶梯。请你找出达到楼层顶部的最低花费。</p>
-<p>在开始时，你可以选择从索引为 <code>0</code> 或 <code>1</code> 的元素作为初始阶梯。</p>
+                <h2 id="740-删除并获得点数"><a href="#740-删除并获得点数" class="headerlink" title="740. 删除并获得点数"></a>740. 删除并获得点数</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给你一个整数数组 <code>nums</code> ，你可以对它进行一些操作。</p>
+<p>每次操作中，选择任意一个 <code>nums[i]</code> ，删除它并获得 <code>nums[i]</code> 的点数。之后，你必须删除每个等于 <code>nums[i] - 1</code> 或 <code>nums[i] + 1</code> 的元素。</p>
+<p>开始你拥有 0 个点数。返回你能通过这些操作获得的最大点数。</p>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入：cost = [<span class="hljs-number">10</span>, <span class="hljs-number">15</span>, <span class="hljs-number">20</span>]<br>输出：<span class="hljs-number">15</span><br>解释：最低花费是从 cost[<span class="hljs-number">1</span>] 开始，然后走两步，一共花费 <span class="hljs-number">15</span>。<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入: nums = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>]<br>输出: <span class="hljs-number">6</span><br>解释: <br>删除 <span class="hljs-number">4</span> 来获得 <span class="hljs-number">4</span> 个点数，因此 <span class="hljs-number">3</span> 也被删除。<br>之后，删除 <span class="hljs-number">2</span> 来获得 <span class="hljs-number">2</span> 个点数。总共获得 <span class="hljs-number">6</span> 个点数。<br></code></pre></td></tr></table></figure>
 
 <p><strong>示例 2:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入：cost = [<span class="hljs-number">1</span>, <span class="hljs-number">100</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">100</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">100</span>, <span class="hljs-number">1</span>]<br>输出：<span class="hljs-number">6</span><br>解释：最低花费是从 cost[<span class="hljs-number">0</span>] 开始，然后走两步，一共花费 <span class="hljs-number">6</span>。<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">输入: nums = [<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]<br>输出: <span class="hljs-number">9</span><br>解释: <br>删除 <span class="hljs-number">3</span> 来获得 <span class="hljs-number">3</span> 个点数，接着要删除两个 <span class="hljs-number">2</span> 和 <span class="hljs-number">4</span>。<br>之后，删除 <span class="hljs-number">3</span> 来获得 <span class="hljs-number">3</span> 个点数。总共获得 <span class="hljs-number">9</span> 个点数。<br></code></pre></td></tr></table></figure>
 
-<p><strong>提示：</strong></p>
+<p><strong>提示:</strong></p>
 <ul>
-<li><code>cost</code> 的长度范围是 <code>[2, 1000]</code>。</li>
-<li><code>cost[i]</code> 将会是一个整型数据，范围为 <code>[0, 999]</code>。</li>
+<li><code>1 &lt;= nums.length &lt;= 2 * 10^4</code></li>
+<li><code>2 * 10^4 &lt;= nums[i] &lt;= 10^4</code></li>
 </ul>
 <h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><h4 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h4><ol>
-<li><strong>定义状态：</strong> 设 <code>dp[i]</code> 表示从第 <code>i</code> 个阶梯出发，达到楼层顶部的最低花费。</li>
-<li><strong>状态转移方程：</strong> <code>dp[i] = cost[i] + min(dp[i-1], dp[i-2])</code>，即从第 <code>i</code> 个阶梯出发的最低花费等于当前阶梯的花费加上前两个阶梯中最低花费的那个。</li>
-<li><strong>初始状态：</strong> <code>dp[0] = cost[0]</code>，<code>dp[1] = cost[1]</code>。</li>
-<li><strong>遍历顺序：</strong> 从小到大遍历，计算每个阶梯的最低花费。</li>
+<li><strong>定义状态：</strong> 设 <code>dp[i]</code> 表示考虑前 <code>i</code> 个元素（从 0 到 i-1），所能获得的最大点数。</li>
+<li><strong>状态转移方程：</strong> <code>dp[i] = max(dp[i-1], dp[i-2] + count[i])</code>，即考虑第 <code>i</code> 个元素时，最大点数等于不考虑第 <code>i</code> 个元素时的最大点数和考虑第 <code>i</code> 个元素时的最大点数之间的较大值，其中 <code>count[i]</code> 表示元素 <code>i</code> 的数量乘以 <code>i</code> 的值。</li>
+<li><strong>初始状态：</strong> <code>dp[0] = 0</code>，<code>dp[1] = count[1] * 1</code>。</li>
+<li><strong>遍历顺序：</strong> 从小到大遍历，计算每个元素的最大点数。</li>
 </ol>
-<h4 id="特殊案例"><a href="#特殊案例" class="headerlink" title="特殊案例"></a>特殊案例</h4><ul>
-<li>如果输入 <code>cost</code> 的长度为 2，则直接返回 <code>min(cost[0], cost[1])</code>。</li>
-</ul>
-<h3 id="C-代码实现"><a href="#C-代码实现" class="headerlink" title="C#代码实现"></a>C#代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">MinCostClimbingStairs</span><span class="hljs-params">(<span class="hljs-type">int</span>[] cost)</span> &#123;<br>    <span class="hljs-comment">// 定义变量n，表示cost数组的长度</span><br>    <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> cost.Length;<br><br>    <span class="hljs-comment">// 如果cost数组的长度为2，则直接返回cost数组中两个元素的最小值</span><br>    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">2</span>) &#123;<br>        <span class="hljs-keyword">return</span> Math.Min(cost[<span class="hljs-number">0</span>], cost[<span class="hljs-number">1</span>]);<br>    &#125;<br><br>    <span class="hljs-comment">// 定义变量dp，长度为n，用于存储状态</span><br>    <span class="hljs-type">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n];<br>    <span class="hljs-comment">// 初始化dp数组，dp[0]表示爬到第一阶楼梯的最小花费，dp[1]表示爬到第二阶楼梯的最小花费</span><br>    dp[<span class="hljs-number">0</span>] = cost[<span class="hljs-number">0</span>];<br>    dp[<span class="hljs-number">1</span>] = cost[<span class="hljs-number">1</span>];<br><br>    <span class="hljs-comment">// 从第三阶楼梯开始，动态规划计算最小花费</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>; i &lt; n; i++) &#123;<br>        <span class="hljs-comment">// dp[i]表示爬到第i阶楼梯的最小花费</span><br>        dp[i] = cost[i] + Math.Min(dp[i - <span class="hljs-number">1</span>], dp[i - <span class="hljs-number">2</span>]);<br>    &#125;<br><br>    <span class="hljs-comment">// 返回爬到第n阶楼梯的最小花费</span><br>    <span class="hljs-keyword">return</span> Math.Min(dp[n - <span class="hljs-number">1</span>], dp[n - <span class="hljs-number">2</span>]);<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="C-代码实现"><a href="#C-代码实现" class="headerlink" title="C#代码实现"></a>C#代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">DeleteAndEarn</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> &#123;<br>    <span class="hljs-comment">// 如果数组为空或者长度为0，返回0</span><br>    <span class="hljs-keyword">if</span> (nums == <span class="hljs-literal">null</span> || nums.Length == <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br><br>    <span class="hljs-comment">// 获取数组中的最大值</span><br>    <span class="hljs-type">int</span> <span class="hljs-variable">maxVal</span> <span class="hljs-operator">=</span> nums.Max();<br>    <span class="hljs-comment">// 创建一个数组，长度为最大值+1</span><br>    <span class="hljs-type">int</span>[] count = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[maxVal + <span class="hljs-number">1</span>];<br><br>    <span class="hljs-comment">// 遍历数组，将每个数字出现的次数记录到count数组中</span><br>    foreach (<span class="hljs-type">int</span> num in nums) &#123;<br>        count[num]++;<br>    &#125;<br><br>    <span class="hljs-comment">// 创建一个数组，长度为最大值+1</span><br>    <span class="hljs-type">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[maxVal + <span class="hljs-number">1</span>];<br>    <span class="hljs-comment">// 初始化dp数组，dp[1] = count[1] * 1</span><br>    dp[<span class="hljs-number">1</span>] = count[<span class="hljs-number">1</span>] * <span class="hljs-number">1</span>;<br><br>    <span class="hljs-comment">// 从dp[2]开始，遍历数组</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>; i &lt;= maxVal; i++) &#123;<br>        <span class="hljs-comment">// dp[i] = Math.Max(dp[i - 1], dp[i - 2] + count[i] * i);</span><br>        <span class="hljs-comment">// 如果dp[i - 1]的值大于dp[i - 2] + count[i] * i，则dp[i] = dp[i - 1]，否则dp[i] = dp[i - 2] + count[i] * i</span><br>        dp[i] = Math.Max(dp[i - <span class="hljs-number">1</span>], dp[i - <span class="hljs-number">2</span>] + count[i] * i);<br>    &#125;<br><br>    <span class="hljs-comment">// 返回dp数组中最大值</span><br>    <span class="hljs-keyword">return</span> dp[maxVal];<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h3 id="C代码实现"><a href="#C代码实现" class="headerlink" title="C代码实现"></a>C代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">minCostClimbingStairs</span><span class="hljs-params">(<span class="hljs-type">int</span>* cost, <span class="hljs-type">int</span> costSize)</span> &#123;<br>    <span class="hljs-comment">// 如果楼梯只有两阶，则直接返回最小成本</span><br>    <span class="hljs-keyword">if</span> (costSize == <span class="hljs-number">2</span>) &#123;<br>        <span class="hljs-keyword">return</span> fmin(cost[<span class="hljs-number">0</span>], cost[<span class="hljs-number">1</span>]);<br>    &#125;<br><br>    <span class="hljs-comment">// 动态规划，dp[i]表示到第i阶楼梯的最小成本</span><br>    <span class="hljs-type">int</span>* dp = (<span class="hljs-type">int</span>*)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-type">int</span>) * costSize);<br>    dp[<span class="hljs-number">0</span>] = cost[<span class="hljs-number">0</span>];<br>    dp[<span class="hljs-number">1</span>] = cost[<span class="hljs-number">1</span>];<br><br>    <span class="hljs-comment">// 从第二阶楼梯开始，动态规划计算最小成本</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt; costSize; i++) &#123;<br>        dp[i] = cost[i] + fmin(dp[i - <span class="hljs-number">1</span>], dp[i - <span class="hljs-number">2</span>]);<br>    &#125;<br><br>    <span class="hljs-comment">// 返回最后两阶楼梯的最小成本</span><br>    <span class="hljs-type">int</span> result = fmin(dp[costSize - <span class="hljs-number">1</span>], dp[costSize - <span class="hljs-number">2</span>]);<br>    <span class="hljs-built_in">free</span>(dp);<br><br>    <span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="C代码实现"><a href="#C代码实现" class="headerlink" title="C代码实现"></a>C代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">deleteAndEarn</span><span class="hljs-params">(<span class="hljs-type">int</span>* nums, <span class="hljs-type">int</span> numsSize)</span> &#123;<br>    <span class="hljs-comment">// 如果数组为空或者数组长度为0，则返回0</span><br>    <span class="hljs-keyword">if</span> (nums == <span class="hljs-literal">NULL</span> || numsSize == <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br><br>    <span class="hljs-comment">// 找到数组中的最大值</span><br>    <span class="hljs-type">int</span> maxVal = nums[<span class="hljs-number">0</span>];<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; numsSize; i++) &#123;<br>        maxVal = fmax(maxVal, nums[i]);<br>    &#125;<br><br>    <span class="hljs-comment">// 创建一个数组，用于记录每个数字出现的次数</span><br>    <span class="hljs-type">int</span>* count = (<span class="hljs-type">int</span>*)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-type">int</span>) * (maxVal + <span class="hljs-number">1</span>));<br>    <span class="hljs-built_in">memset</span>(count, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(<span class="hljs-type">int</span>) * (maxVal + <span class="hljs-number">1</span>));<br><br>    <span class="hljs-comment">// 遍历数组，记录每个数字出现的次数</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; numsSize; i++) &#123;<br>        count[nums[i]]++;<br>    &#125;<br><br>    <span class="hljs-comment">// 创建一个数组，用于记录动态规划的结果</span><br>    <span class="hljs-type">int</span>* dp = (<span class="hljs-type">int</span>*)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-type">int</span>) * (maxVal + <span class="hljs-number">1</span>));<br>    dp[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;<br>    dp[<span class="hljs-number">1</span>] = count[<span class="hljs-number">1</span>] * <span class="hljs-number">1</span>;<br><br>    <span class="hljs-comment">// 遍历数组，计算动态规划的结果</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= maxVal; i++) &#123;<br>        dp[i] = fmax(dp[i - <span class="hljs-number">1</span>], dp[i - <span class="hljs-number">2</span>] + count[i] * i);<br>    &#125;<br><br>    <span class="hljs-comment">// 找到动态规划的结果中的最大值</span><br>    <span class="hljs-type">int</span> result = dp[maxVal];<br>    <span class="hljs-built_in">free</span>(count);<br>    <span class="hljs-built_in">free</span>(dp);<br><br>    <span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h3 id="时间复杂度和空间复杂度"><a href="#时间复杂度和空间复杂度" class="headerlink" title="时间复杂度和空间复杂度"></a>时间复杂度和空间复杂度</h3><ul>
-<li>时间复杂度：O(n)，其中 n 是 <code>cost</code> 数组的长度。需要计算每个阶梯的最低花费。</li>
-<li>空间复杂度：O(n)。使用了一个大小为 n 的数组来保存中间结果。</li>
+<li>时间复杂度：O(N + M)，其中 N 是数组的长度，M 是数组中的元素值的范围。需要遍历数组并统计每个元素的数量，同时需要计算每个元素值的最大点数。</li>
+<li>空间复杂度：O(M)，其中 M 是数组中的元素值的范围。使用了一个大小为 M+1 的数组来保存每个元素的数量和最大点数。</li>
 </ul>
 
                 
@@ -394,8 +391,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>746. 使用最小花费爬楼梯</div>
-      <div>https://gjts.github.io/2023/12/17/leetcode746/</div>
+      <div>740. 删除并获得点数</div>
+      <div>https://gjts.github.io/2023/12/18/leetcode740/</div>
     </div>
     <div class="license-meta">
       
@@ -407,7 +404,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月17日</div>
+          <div>2023年12月18日</div>
         </div>
       
       
@@ -439,18 +436,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/18/leetcode198/" title="198. 打家劫舍">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">198. 打家劫舍</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/17/leetcode1137/" title="leetcode1137">
-                        <span class="hidden-mobile">leetcode1137</span>
+                      <a href="/2023/12/18/leetcode198/" title="198. 打家劫舍">
+                        <span class="hidden-mobile">198. 打家劫舍</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
